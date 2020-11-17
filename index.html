@@ -10,7 +10,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Hello, world!</title>
+    <title>Krystal Plastik</title>
     <style>
         body {
             font-family: 'Roboto';
@@ -135,10 +135,10 @@
                         <a class="nav-link" id="pills-pe-tab" data-toggle="pill" href="#pills-pe" role="tab" aria-controls="pills-pe" aria-selected="false">PE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-hd" role="tab" aria-controls="pills-hd" aria-selected="false">HD</a>
+                        <a class="nav-link" id="pills-hd" data-toggle="pill" href="#pills-hd" role="tab" aria-controls="pills-hd" aria-selected="false">HD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-kertas-nasi" role="tab" aria-controls="pills-kertas-nasi" aria-selected="false">Kertas Nasi</a>
+                        <a class="nav-link" id="pills-kertas-nasi" data-toggle="pill" href="#pills-kertas-nasi" role="tab" aria-controls="pills-kertas-nasi" aria-selected="false">Kertas Nasi</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
@@ -203,13 +203,49 @@
             </div>
         </div>
     </div>
+    <div class="section" id="section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-5 py-md-0">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="text-white mb-3">here our official account number</h3>
+                            <p>to prevent fraud, this is list of our account number. dont transfer if its different from our list.</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="list-group list-group-flush">
+                                    <li class="list-group-item" data-clipboard-text="2970195672">
+                                        <img src="https://www.bca.co.id/assets/images/logo-bca.png" width="100">
+                                        <span class="ml-1">2970195672 a/n Siau Jen</span>
+                                        <span class="float-right">Copy</span>
+                                    </li>
+                                    <li class="list-group-item" data-clipboard-text="2970457367">
+                                        <img src="https://www.bca.co.id/assets/images/logo-bca.png" width="100">
+                                        <span class="ml-1">2970457367 a/n Siau Jen</span>
+                                        <span class="float-right">Copy</span>
+                                    </li>
+                                    <li class="list-group-item" data-clipboard-text="10135010163">
+                                        <img src="https://www.bankmestika.co.id/img/logo2.png" width="100">
+                                        <span class="ml-1">10135010163 a/n Siau Jen</span>
+                                        <span class="float-right">Copy</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
 
-
 <ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Kristal Plastik</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
-    <li data-menuanchor="3rdPage"><a href="#3rdPage">Contact</a></li>
+    <li data-menuanchor="main" class="active"><a href="#main">Krystal Plastik</a></li>
+    <li data-menuanchor="about"><a href="#about">About</a></li>
+    <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+    <li data-menuanchor="payment"><a href="#payment">Payment</a></li>
 </ul>
 
 <!-- Optional JavaScript -->
@@ -224,9 +260,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        anchors: ['main', 'about', 'contact', 'payment'],
         sectionsColor: ['#ff5f45', '#fec401', '#fc6c7c', '#0798ec'],
         css3: true,
         scrollingSpeed: 1000,
@@ -237,7 +275,15 @@
         dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
         controlArrows: false
     });
+    $(function () {
+        var clipboard = new Clipboard('.list-group-item');
 
+        clipboard.on('success', function(e) {
+            $(e.trigger).find('span:last').text('Copied');
+            setTimeout(function(){ $(e.trigger).find('span:last').text('Copy'); }, 3000);
+            e.clearSelection();
+        });
+    });
 </script>
 </body>
 </html>
