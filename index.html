@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Hello, world!</title>
+    <style>
+        body {
+            font-family: 'Roboto';
+        }
+
+        p, a{
+            color: #2f4662;
+        }
+
+        #menu-line {
+            position: absolute;
+            top: 24px;
+            left: 0;
+            width: 101px;
+            height: 2px;
+            transition: all 600ms ease
+        }
+
+        #menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 70;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            letter-spacing: 1px;
+            font-size: 1.1em
+        }
+
+        #menu li {
+            display: inline-block;
+            margin: 10px 0
+        }
+
+        #menu a {
+            color: #fff;
+            padding: 0 1.1em 1.1em
+        }
+
+        .menu-active {
+            font-weight: 700
+        }
+
+        #menu-theme-mobile,
+        .menu-sub {
+            display: none
+        }
+
+        .menu-sub li {
+            display: block
+        }
+        @media screen and (max-width:630px) {
+            h1 {
+                font-size:6.5em
+            }
+            #menu {
+                letter-spacing:0;
+                font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'
+            }
+            [data-lang=ru] h1 {
+                font-size:4em
+            }
+        }
+        @media screen and (max-width:550px) {
+            #section-1 h1 {
+                font-size:6em
+            }
+            h1 {
+                font-size:5em
+            }
+            [data-lang=ru] h1 {
+                font-size:3.6em
+            }
+            .intro p {
+                max-width:75%
+            }
+            #menu li a {
+                padding:0 .7em .7em
+            }
+            [data-lang=es] #menu li a,
+            [data-lang=ru] #menu li a {
+                padding:0 .4em .4em
+            }
+            [data-lang=es] #menu,
+            [data-lang=ru] #menu {
+                font-size:.98em
+            }
+            #download,
+            #menu-contact,
+            .mobile-hide {
+                display:none!important
+            }
+            .shell-body {
+                margin:1.6em
+            }
+            #fp-nav.right {
+                right:7px
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section fp-auto-height-responsive" id="section0">
+        <div class="intro text-center text-white">
+            <h1>Krystal Plastik</h1>
+            <p class="text-white">Store that sell everything about plastic</p>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="slide text-white" id="slide1">
+            <div class="intro">
+                <h1 class="text-center">What we sell</h1>
+                <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-plastic-tab" data-toggle="pill" href="#pills-plastic" role="tab" aria-controls="pills-plastic" aria-selected="false">Plastic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-pe-tab" data-toggle="pill" href="#pills-pe" role="tab" aria-controls="pills-pe" aria-selected="false">PE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-hd" role="tab" aria-controls="pills-hd" aria-selected="false">HD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-kertas-nasi" role="tab" aria-controls="pills-kertas-nasi" aria-selected="false">Kertas Nasi</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h1>This example uses responsiveWidth: 900</h1>
+        </div>
+
+    </div>
+    <div class="section" id="section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-5 py-md-0">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-2">
+                            <h2 class="text-white mb-3">have a questions ?</h2>
+                            <div class="card card-body">
+                                <h4 class="mb-3" style="color: rgb(252, 108, 124);">Contact</h4>
+                                <p>
+                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                    <a href="https://wa.me/+6285277426892">+6285277426892</a>
+                                </p>
+                                <p>
+                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                    <a href="https://wa.me/+6281267111999">+6281267111999</a>
+                                </p>
+                                <h4 class="mb-3" style="color: rgb(252, 108, 124);">Store</h4>
+                                <p>
+                                    <i aria-hidden="true" class="fa fa-location"></i>
+                                    Jln. Cipto No.28, Kisaran, Sumatera Utara
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mapouter">
+                                <div class="gmap_canvas">
+                                    <iframe style="width: 100%; height: 50vh" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=jln%20cipto%20no%2028%20kisaran&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0"
+                                            marginwidth="0"></iframe>
+                                    <a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+                                <style>.mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                }
+
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                }</style>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Kristal Plastik</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Contact</a></li>
+</ul>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        sectionsColor: ['#ff5f45', '#fec401', '#fc6c7c', '#0798ec'],
+        css3: true,
+        scrollingSpeed: 1000,
+        navigation: true,
+        slidesNavigation: true,
+        responsiveHeight: 330,
+        dragAndMove: true,
+        dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+        controlArrows: false
+    });
+
+</script>
+</body>
+</html>
