@@ -20,6 +20,10 @@
             color: #2f4662;
         }
 
+        .list-group-item {
+        	cursor: pointer;
+        }
+
         #menu-line {
             position: absolute;
             top: 24px;
@@ -61,6 +65,9 @@
 
         .menu-sub li {
             display: block
+        }
+        #fp-nav ul li a span, .fp-slidesNav ul li a span {
+        	background: #fff;
         }
         @media screen and (max-width:630px) {
             h1 {
@@ -117,7 +124,7 @@
     <div class="section fp-auto-height-responsive" id="section0">
         <div class="intro text-center text-white">
             <h1>Krystal Plastik</h1>
-            <p class="text-white">Store that sell everything about plastic</p>
+            <p class="text-white mx-auto">Store that sell everything about plastic</p>
         </div>
     </div>
     <div class="section" id="section1">
@@ -210,28 +217,59 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <h3 class="text-white mb-3">here our official account number</h3>
-                            <p>to prevent fraud, this is list of our account number. dont transfer if its different from our list.</p>
+                            <p class="text-white">to prevent fraud, this is list of our account number. dont transfer if its different from our list.</p>
                         </div>
                         <div class="col-12 col-md-6">
-                            <div class="card">
-                                <div class="list-group list-group-flush">
-                                    <li class="list-group-item" data-clipboard-text="2970195672">
-                                        <img src="https://www.bca.co.id/assets/images/logo-bca.png" width="100">
-                                        <span class="ml-1">2970195672 a/n Siau Jen</span>
-                                        <span class="float-right">Copy</span>
-                                    </li>
-                                    <li class="list-group-item" data-clipboard-text="2970457367">
-                                        <img src="https://www.bca.co.id/assets/images/logo-bca.png" width="100">
-                                        <span class="ml-1">2970457367 a/n Siau Jen</span>
-                                        <span class="float-right">Copy</span>
-                                    </li>
-                                    <li class="list-group-item" data-clipboard-text="10135010163">
-                                        <img src="https://www.bankmestika.co.id/img/logo2.png" width="100">
-                                        <span class="ml-1">10135010163 a/n Siau Jen</span>
-                                        <span class="float-right">Copy</span>
-                                    </li>
-                                </div>
-                            </div>
+                        	<div class="accordion" id="accordion">
+							  <div class="card">
+							    <div class="card-header" id="bca-header">
+							      <h2 class="mb-0">
+							        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#bca-account" aria-expanded="true" aria-controls="bca-account">
+							          <img src="https://www.bca.co.id/assets/images/logo-bca.png" width="50">
+							          <i class="fas fa-angle-down rotate-icon float-right"></i>
+							        </button>
+							      </h2>
+							    </div>
+
+							    <div id="bca-account" class="collapse show" aria-labelledby="bca-header" data-parent="#accordion">
+							        <div class="list-group list-group-flush">
+	                                    <li class="list-group-item" data-clipboard-text="2970195672">
+	                                    	<div class="d-flex w-100 justify-content-between">
+										      	<h5 class="mb-1">2970195672<br><small>Siau Jen</small></h5>
+	                                        	<div><small class="btn-sm btn-light float-right">Copy</small></div>
+										    </div>
+										    
+	                                    </li>
+	                                    <li class="list-group-item" data-clipboard-text="2970457367">
+	                                        <div class="d-flex w-100 justify-content-between">
+										      	<h5 class="mb-1">2970457367<br><small>Siau Jen</small></h5>
+	                                        	<div><small class="btn-sm btn-light float-right">Copy</small></div>
+										    </div>
+	                                    </li>
+	                                </div>
+							    </div>
+							  </div>
+							  <div class="card">
+							    <div class="card-header" id="mestika-header">
+							      <h2 class="mb-0">
+							        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#mestika-account" aria-expanded="false" aria-controls="mestika-account">
+							          <img src="https://www.bankmestika.co.id/img/logo2.png" width="100">
+							          <i class="fas fa-angle-down rotate-icon float-right"></i>
+							        </button>
+							      </h2>
+							    </div>
+							    <div id="mestika-account" class="collapse" aria-labelledby="mestika-header" data-parent="#accordion">
+							        <div class="list-group list-group-flush">
+	                                    <li class="list-group-item" data-clipboard-text="2970195672">
+	                                        <div class="d-flex w-100 justify-content-between">
+										      	<h5 class="mb-1">10135010163<br><small>Siau Jen</small></h5>
+	                                        	<div><small class="btn-sm btn-light float-right">Copy</small></div>
+										    </div>
+	                                    </li>
+	                                </div>
+							    </div>
+							  </div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -278,8 +316,8 @@
         var clipboard = new Clipboard('.list-group-item');
 
         clipboard.on('success', function(e) {
-            $(e.trigger).find('span:last').text('Copied');
-            setTimeout(function(){ $(e.trigger).find('span:last').text('Copy'); }, 3000);
+            $(e.trigger).find('small.btn-sm').text('Copied');
+            setTimeout(function(){ $(e.trigger).find('small.btn-sm').text('Copy'); }, 3000);
             e.clearSelection();
         });
     });
